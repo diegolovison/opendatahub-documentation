@@ -105,7 +105,6 @@ def ray_fn():
 
    cluster = Cluster( <3>
        ClusterConfiguration(
-           namespace="my_project" <4>
            name="raytest",
            num_workers=1,
            head_cpus="500m",
@@ -169,7 +168,7 @@ if __name__ == '__main__': <13>
 <1> Imports from the CodeFlare SDK the packages that define the cluster functions
 <2> Imports the time package as a workaround for https://issues.redhat.com/browse/RHOAIENG-6701
 <3> Specifies the Ray cluster configuration: replace these example values with the values for your Ray cluster
-<4> Specifies the project
+
 <5> Specifies the location of the Ray cluster image: if using a disconnected environment, replace the default value with the location for your environment
 <6> Specifies the local queue to which the Ray cluster will be submitted: you can omit this line if you configured a default local queue
 <7> Creates a Ray cluster using the specified image and configuration
